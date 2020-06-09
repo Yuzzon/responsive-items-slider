@@ -1,0 +1,29 @@
+.slider__wrapper {
+   display: flex;
+   flex-direction: column;
+   max-width: 80%;
+   flex-basis: 80%;
+   margin: 20px 70px;
+}
+.slick-next1 {
+   width: 58px !important;
+   height: 58px !important;
+   right: -64px !important;
+}
+.slick-next1:before {
+   content: url("../../assets/arrow.svg") !important;
+   width: 58px;
+   height: 58px;
+}
+.slick-prev {
+   width: 58px !important;
+   height: 58px !important;
+   left: -64px !important;
+   z-index: 1;
+   transform: rotate(180deg) translate(0, 50%)!important;
+}
+.slick-prev:before {
+   content: url("../../assets/arrow.svg") !important;
+   width: 58px;
+   height: 58px;
+}

@@ -1,0 +1,7 @@
+.product__wrapper{
+   border: 1px solid grey;
+}
+.product__image{
+   width: 200px;
+   height: 200px;
+}
