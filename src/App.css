@@ -2,5 +2,8 @@
    display: flex;
    max-width: 100%;
    flex-basis: 100%;
+   flex-direction: column;
    justify-content: center;
+   font-family: 'Roboto', sans-serif;
+   overflow-x: hidden;
 }
