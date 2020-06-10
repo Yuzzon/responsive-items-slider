@@ -7,16 +7,16 @@ const SliderItem = ({ image_url, product_image_alt, brand_name, product_title, p
    function priceFormat(price) {
       return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
    }
-   const onClickGa = () => {
+   const onClickGa = (action, label) => {
       ReactGA.event({
-         category: 'UserSection',
-         action: {product_title},
-         label: {product_id}
+         category: 'User Section',
+         action: `Click on item - ${String(action)}`,
+         label: String(label)
        });
    } 
 
    return (
-      <div className="product__wrapper" onClick={onClickGa}>
+      <div className="product__wrapper" onClick={()=> onClickGa(product_title, product_id)}>
          <div className="product__image--block">
          <img src={image_url} alt={product_image_alt} className="product__image" />
          <img src={favorite} alt="" className="product__image--favorite"/>
