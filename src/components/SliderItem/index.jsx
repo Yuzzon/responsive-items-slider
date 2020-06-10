@@ -2,15 +2,14 @@ import React from 'react';
 import './styles.css';
 import favorite from '../../assets/heart-icon.svg';
 
-const SliderItem = ({ product_id, product_image_alt, brand_name, product_title, price, available, rating, rating_count }) => {
-   const baseUrl = `https://img.dbroker.com.ua/images/card/product/0520/26/${product_id}_1.jpg`;
+const SliderItem = ({ image_url, product_image_alt, brand_name, product_title, price, available, rating, rating_count, url_direct }) => {
    function priceFormat(price) {
       return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
    }
    return (
       <div className="product__wrapper">
          <div className="product__image--block">
-         <img src={baseUrl} alt={product_image_alt} className="product__image" />
+         <img src={image_url} alt={product_image_alt} className="product__image" />
          <img src={favorite} alt="" className="product__image--favorite"/>
          </div>
          <h6 className="product__brand">{brand_name}</h6>
@@ -41,7 +40,7 @@ const SliderItem = ({ product_id, product_image_alt, brand_name, product_title, 
                }
             </div>
             <div className="product__bottom--right">
-               <button type="button" className="product__button--buy">Купить</button>
+               <a href={`https://dok.dbroker.com.ua/${url_direct.substr(1)}`} target="_blank" className="product__button--buy">Купить</a>
             </div>
          </div>
       </div>
