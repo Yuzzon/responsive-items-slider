@@ -1,13 +1,22 @@
 import React from 'react';
 import './styles.css';
 import favorite from '../../assets/heart-icon.svg';
+import ReactGA from 'react-ga';
 
-const SliderItem = ({ image_url, product_image_alt, brand_name, product_title, price, available, rating, rating_count, url_direct }) => {
+const SliderItem = ({ image_url, product_image_alt, brand_name, product_title, price, available, rating, rating_count, url_direct, product_id }) => {
    function priceFormat(price) {
       return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
    }
+   const onClickGa = () => {
+      ReactGA.event({
+         category: 'UserSection',
+         action: {product_title},
+         label: {product_id}
+       });
+   } 
+
    return (
-      <div className="product__wrapper">
+      <div className="product__wrapper" onClick={onClickGa}>
          <div className="product__image--block">
          <img src={image_url} alt={product_image_alt} className="product__image" />
          <img src={favorite} alt="" className="product__image--favorite"/>
