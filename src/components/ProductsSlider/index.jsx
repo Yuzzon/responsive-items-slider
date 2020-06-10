@@ -15,25 +15,36 @@ const ProductsSlider = () => {
       initialSlide: 0,
       responsive: [
          {
-            breakpoint: 1024,
+            breakpoint: 1280,
             settings: {
-               slidesToShow: 4,
-               slidesToScroll: 1,
-               infinite: true
+               slidesToShow: 4
+            }
+         },
+         {
+            breakpoint: 1023,
+            settings: {
+               slidesToShow: 3
+            }
+         },
+         {
+            breakpoint: 768,
+            settings: {
+               slidesToShow: 2.5,
+               arrows: false
             }
          },
          {
             breakpoint: 600,
             settings: {
                slidesToShow: 2,
-               slidesToScroll: 1
+               arrows: false
             }
          },
          {
             breakpoint: 480,
             settings: {
                slidesToShow: 1.5,
-               slidesToScroll: 1
+               arrows: false
             }
          }
       ]
