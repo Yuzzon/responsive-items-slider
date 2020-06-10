@@ -40,7 +40,7 @@ const SliderItem = ({ image_url, product_image_alt, brand_name, product_title, p
                }
             </div>
             <div className="product__bottom--right">
-               <a href={`https://dok.dbroker.com.ua/${url_direct.substr(1)}`} target="_blank" className="product__button--buy">Купить</a>
+               <a href={`https://dok.dbroker.com.ua/${url_direct.substr(1)}`} rel="noopener noreferrer" target="_blank" className="product__button--buy">Купить</a>
             </div>
          </div>
       </div>
